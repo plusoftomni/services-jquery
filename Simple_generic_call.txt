@@ -1,0 +1,19 @@
+This note shows a simple way to call any REST service using jQuery.
+Make a call, send a JSON object, read a JSON object received, all is right down here.
+
+[code]
+  var jsonRequest = { id: 1, name: 'Khtry' };
+  $.ajax({
+	  url: '{url}',
+	  type: 'GET/POST/PUT/...',
+	  dataType: 'json',
+	  data: jsonRequest,
+	  //Looking for a Basic Authentication? Its commented in the next three lines
+	  //headers: {
+	  //     "Authorization": "Basic " + btoa("{user}" + ":" + "{pass}")
+	  //},
+	  success: function (data) { 
+		   //data is your JSON response
+	  }
+  });
+[/code]
